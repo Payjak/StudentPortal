@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/Content/CustomBootstrap.css" rel="stylesheet" />
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Robertson College - Software Developpers</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container" style="margin-left:15px">
+            <div class="navbar-header pull-left">
+                <a href="~/Home/Index" class="navbar-brand">
+                    <img src="~/Images/robertsoncollege-logo.png" />
+                </a>
+            </div>
+            <div class=".header ul.nav-utility">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div><br />
+            <div class="nav navbar-nav navbar-right" style="padding-right:10px">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Search Users", "SearchUsers", "UserModels")</li>
+                    <li>@Html.ActionLink("Profile", "Details", "StudentProfiles")</li>
+                </ul>
+                <div class="btn-group show-on-hover">
+                    <div role="button" class="navbar-link dropdown-toggle verticalAlign" data-toggle="dropdown">
+                        Projects <span class="caret"></span>
+                    </div>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>@Html.ActionLink("Projects", "Index", "Projects")</li>
+                        <li>@Html.ActionLink("Search Projects", "SearchProject", "Projects")</li>
+                    </ul>
+                </div>
+                <div class="btn-group show-on-hover">
+                    <div role="button" class="navbar-link dropdown-toggle verticalAlign" data-toggle="dropdown">
+                        Blogs <span class="caret"></span>
+                    </div>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>@Html.ActionLink("Blogs", "Index", "Blog")</li>
+                        <li>@Html.ActionLink("Admin Options", "AdminIndex", "Blog")</li>
+                    </ul>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("About Us", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+
+    <br /><br />
+    <div class="container body-content pushContent" style="padding-left:100px; padding-right:100px">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Robertson College</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

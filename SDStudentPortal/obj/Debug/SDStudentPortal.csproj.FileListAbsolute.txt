@@ -1,0 +1,12 @@
+C:\Users\Rob P\Source\Repos\Crezy-Coders\SDStudentPortal\SDStudentPortal\bin\SDStudentPortal.dll.config
+C:\Users\Rob P\Source\Repos\Crezy-Coders\SDStudentPortal\SDStudentPortal\bin\SDStudentPortal.dll
+C:\Users\Rob P\Source\Repos\Crezy-Coders\SDStudentPortal\SDStudentPortal\bin\SDStudentPortal.pdb
+C:\Users\Rob P\Source\Repos\Crezy-Coders\SDStudentPortal\SDStudentPortal\obj\Debug\SDStudentPortal.dll
+C:\Users\Rob P\Source\Repos\Crezy-Coders\SDStudentPortal\SDStudentPortal\obj\Debug\SDStudentPortal.pdb
+C:\Users\Rob P\Source\Repos\Crezy-Coders\SDStudentPortal\SDStudentPortal\obj\Debug\SDStudentPortal.csprojResolveAssemblyReference.cache
+C:\Users\Rob P\Source\Repos\StudentPortal\SDStudentPortal\bin\SDStudentPortal.dll.config
+C:\Users\Rob P\Source\Repos\StudentPortal\SDStudentPortal\bin\SDStudentPortal.dll
+C:\Users\Rob P\Source\Repos\StudentPortal\SDStudentPortal\bin\SDStudentPortal.pdb
+C:\Users\Rob P\Source\Repos\StudentPortal\SDStudentPortal\obj\Debug\SDStudentPortal.csprojResolveAssemblyReference.cache
+C:\Users\Rob P\Source\Repos\StudentPortal\SDStudentPortal\obj\Debug\SDStudentPortal.dll
+C:\Users\Rob P\Source\Repos\StudentPortal\SDStudentPortal\obj\Debug\SDStudentPortal.pdb

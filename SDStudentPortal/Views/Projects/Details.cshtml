@@ -1,0 +1,56 @@
+﻿@model SDStudentPortal.Models.Project
+
+@{
+    ViewBag.Title = "Details";
+    var grid = new WebGrid(ViewBag.ProjectFile, canPage: true, rowsPerPage: 5,
+    selectionFieldName: "selectedRow", ajaxUpdateContainerId: "gridContent");
+    grid.Pager(WebGridPagerModes.NextPrevious);
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Project</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayName("Files")
+        </dt>
+        <dd>
+            @grid.GetHtml(tableStyle: "webGrid",
+            headerStyle: "header",
+            alternatingRowStyle: "alt",
+            selectedRowStyle: "select",
+            columns: grid.Columns(
+                     grid.Column("File#", format: item => item.WebGrid.Rows.IndexOf(item) + 1 + Math.Round(Convert.ToDouble(grid.TotalRowCount / grid.PageCount) / grid.RowsPerPage) * grid.RowsPerPage * grid.PageIndex),
+                     grid.Column("Title", "Title"),
+                     grid.Column("Description", "Description"),
+                     grid.Column("","",format: @<text>
+                    
+            <a href='~/@item.UploadFileUrl' target="_blank"> @item.UploadFileUrl </a>
+                                                </text>),                     
+                     grid.Column("UploadFileUrl", "File", format: @<text><img src="@item.UploadFileUrl" /></text>)
+            ))
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProjectID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
