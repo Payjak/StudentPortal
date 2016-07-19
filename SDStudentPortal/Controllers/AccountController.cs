@@ -17,6 +17,7 @@ namespace SDStudentPortal.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+
         private ApplicationSignInManager _signInManager;
         private ApplicationRoleManager _roleManager;
         private ApplicationUserManager _userManager;
