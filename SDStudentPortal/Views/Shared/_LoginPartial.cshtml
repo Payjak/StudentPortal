@@ -21,7 +21,7 @@
                 <li>@Html.ActionLink("Hello " + User.Identity.GetUserName(), "Edit", "UserModels"))</li>
                               
                 <li>
-                    <button type="button" class="btn btn-danger btn-lg btn3d" onclick="javascript:document.getElementById('logoutForm').submit()"><span class="glyphicon glyphicon-off"></span> Logout</button>
+                    <button type="button" class="btn btn-danger btn-sm btn3d" onclick="javascript:document.getElementById('logoutForm').submit()"><span class="glyphicon glyphicon-off"></span> Logout</button>
                 </li>
             </ul>
         }
@@ -30,7 +30,7 @@
     {
         <ul class="nav navbar-nav navbar-right">
             <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-            <li><button type="button" class="btn btn-success btn-lg btn3d" onclick="@("window.location.href='" + @Url.Action("Login", "Account") + "'");"><span class="glyphicon glyphicon-log-in"></span> &nbsp;Log In</button></li>
+            <li><button type="button" class="btn btn-success btn-sm btn3d" onclick="@("window.location.href='" + @Url.Action("Login", "Account") + "'");"><span class="glyphicon glyphicon-log-in"></span> &nbsp;Log In</button></li>
         </ul>
     }
 }
@@ -38,6 +38,6 @@ else
 {
     <ul class="nav navbar-nav navbar-right">
         <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-        <li><button type="button" class="btn btn-success btn-lg btn3d" onclick="@("window.location.href='" + @Url.Action("Login", "Account") + "'");"><span class="glyphicon glyphicon-log-in"></span> &nbsp;Log In</button></li>
+        <li><button type="button" class="btn btn-success btn-sm btn3d" onclick="@("window.location.href='" + @Url.Action("Login", "Account") + "'");"><span class="glyphicon glyphicon-log-in"></span> &nbsp;Log In</button></li>
     </ul>
 }
