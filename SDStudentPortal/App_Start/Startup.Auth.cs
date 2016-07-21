@@ -6,7 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using SDStudentPortal.Models;
-
+[assembly: OwinStartup(typeof(SDStudentPortal.Startup))]
 namespace SDStudentPortal
 {
     public partial class Startup
@@ -14,6 +14,8 @@ namespace SDStudentPortal
         // For more information on configuring authentication, please visit http://go.microsoft.com/fwlink/?LinkId=301864
         public void ConfigureAuth(IAppBuilder app)
         {
+
+
             // Configure the db context, user manager and signin manager to use a single instance per request
             app.CreatePerOwinContext(ApplicationDbContext.Create);
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
@@ -35,8 +37,9 @@ namespace SDStudentPortal
                         validateInterval: TimeSpan.FromMinutes(30),
                         regenerateIdentity: (manager, user) => user.GenerateUserIdentityAsync(manager))
                 }
-            });            
-            
+            });
+            //connect to signalr chathub
+            app.MapSignalR();
         }
     }
 }

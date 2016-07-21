@@ -10,3 +10,7 @@ C:\Users\Rob P\Source\Repos\StudentPortal\SDStudentPortal\bin\SDStudentPortal.pd
 C:\Users\Rob P\Source\Repos\StudentPortal\SDStudentPortal\obj\Debug\SDStudentPortal.csprojResolveAssemblyReference.cache
 C:\Users\Rob P\Source\Repos\StudentPortal\SDStudentPortal\obj\Debug\SDStudentPortal.dll
 C:\Users\Rob P\Source\Repos\StudentPortal\SDStudentPortal\obj\Debug\SDStudentPortal.pdb
+C:\Users\Rob P\Source\Repos\StudentPortal\SDStudentPortal\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\Rob P\Source\Repos\StudentPortal\SDStudentPortal\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\Rob P\Source\Repos\StudentPortal\SDStudentPortal\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\Rob P\Source\Repos\StudentPortal\SDStudentPortal\bin\Microsoft.AspNet.SignalR.SystemWeb.xml

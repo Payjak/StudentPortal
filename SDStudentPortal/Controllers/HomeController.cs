@@ -14,6 +14,11 @@ namespace SDStudentPortal.Controllers
     {
         ApplicationDbContext db = new ApplicationDbContext();
 
+        public ActionResult Chat()
+        {
+            return View();
+        }
+
         public ActionResult Index()
         {            
             IEnumerable<Blog> blogs = db.blog.OrderByDescending(b => b.BlogCreatedDate).ToList();
