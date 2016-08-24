@@ -19,6 +19,11 @@ namespace SDStudentPortal.Controllers
             return View();
         }
 
+        public ActionResult Calendar()
+        {
+            return View();
+        }
+
         public ActionResult Index()
         {            
             IEnumerable<Blog> blogs = db.blog.OrderByDescending(b => b.BlogCreatedDate).ToList();
