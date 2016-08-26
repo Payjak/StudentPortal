@@ -96,6 +96,7 @@ namespace SDStudentPortal.Controllers
                     case SignInStatus.Success:
                         {
                             var user = await UserManager.FindByNameAsync(model.Email);
+                            Session["email"] = user.Email;
                             if (user != null)
                             {
                                 if (!await UserManager.IsEmailConfirmedAsync(user.Id))
