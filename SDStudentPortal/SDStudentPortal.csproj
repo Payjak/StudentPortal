@@ -253,6 +253,7 @@
     <Content Include="Content\StyleSheet2.css" />
     <Content Include="favicon.ico" />
     <Content Include="FileURL\300.jpg" />
+    <Content Include="FileURL\579947507.mp4" />
     <Content Include="FileURL\forgotpass.PNG" />
     <Content Include="FileURL\MovieScreenShot.jpg" />
     <Content Include="FileURL\ScreenShot.png" />

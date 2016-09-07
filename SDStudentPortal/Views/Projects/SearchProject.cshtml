@@ -4,14 +4,14 @@
     ViewBag.Title = "SearchProject";
 }
 
-<h2>Search Project</h2>
+<h2>Search Project By Student</h2>
 <hr style="border-color:crimson" />
 
 @using (Html.BeginForm("SearchProject", "Projects", FormMethod.Get))
 {
     <div class="form-horizontal">
         <div class="form-group">
-            @Html.Label("Project Filter", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Search Student", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.TextBox("txtsearchQuery", null, new { @class = "form-control" })
             </div>

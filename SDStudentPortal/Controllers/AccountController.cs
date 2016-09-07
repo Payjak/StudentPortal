@@ -97,6 +97,8 @@ namespace SDStudentPortal.Controllers
                         {
                             var user = await UserManager.FindByNameAsync(model.Email);
                             Session["email"] = user.Email;
+                            Session["userid"] = user.Id;
+                           
                             if (user != null)
                             {
                                 if (!await UserManager.IsEmailConfirmedAsync(user.Id))
