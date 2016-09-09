@@ -37,7 +37,12 @@ namespace SDStudentPortal.Models
             }
             return View(userModel);
         }
-
+        public ActionResult Logout()
+        {
+            Session.Clear();
+            Session.Abandon();
+            return RedirectToAction("Login", "Account");
+        }
         public ActionResult StudentProfile(int? id)
         {
             if (id == null)

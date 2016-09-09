@@ -20,10 +20,11 @@ namespace SDStudentPortal.Controllers
         public ActionResult Index()
         {
             IEnumerable<Project> projects;
-
+            var email = (string)Session["email"];
             projects = db.project;
+            var project = db.project.Where(p => p.Description == email);
 
-            return View(projects);
+            return View(project);
         }
 
         
@@ -89,11 +90,18 @@ namespace SDStudentPortal.Controllers
             {
                 return HttpNotFound();
             }
-            var uid = User.Identity.GetUserId();
+            if ((string)Session["email"] == project.Description)
+            {
+                var uid = User.Identity.GetUserId();
 
-            ViewBag.ProjectFile = new List<Uploads>( db.Uploads.Where(u => u.ProjectID == id && u.UserId== uid).ToList());
+                ViewBag.ProjectFile = new List<Uploads>(db.Uploads.Where(u => u.ProjectID == id && u.UserId == uid).ToList());
 
-            return View(project);
+                return View(project);
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
         }
 
         // POST: Projects/Edit/5

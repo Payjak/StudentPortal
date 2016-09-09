@@ -96,8 +96,13 @@ namespace SDStudentPortal.Controllers
                     case SignInStatus.Success:
                         {
                             var user = await UserManager.FindByNameAsync(model.Email);
-                            Session["email"] = user.Email;
-                            Session["userid"] = user.Id;
+
+                            if (user.Email != null)
+                            {
+                                Session["email"] = user.Email;
+                                Session["userid"] = user.Id;
+                            }
+                            
                            
                             if (user != null)
                             {
@@ -277,6 +282,8 @@ namespace SDStudentPortal.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            Session.Clear();
+            Session.Abandon();
             return RedirectToAction("Index", "Home");
         }
         
